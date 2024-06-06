@@ -1,0 +1,8 @@
+# See [official doc](https://snapcraft.io/docs/installing-snapd)
+- name: Install snapd
+  ansible.builtin.apt:
+    name:
+      - snapd
+    state: present
+  # TODO: 
+  when: ansible_facts['os_family'] == "Debian"

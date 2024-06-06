@@ -1,0 +1,8 @@
+# See [official installation](https://github.com/trojan-gfw/trojan/wiki/Binary-&-Package-Distributions/)
+- name: Install trojan
+  ansible.builtin.apt:
+    name:
+      - trojan
+    state: present
+  # TODO: 
+  when: ansible_facts['os_family'] == "Debian"
